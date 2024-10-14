@@ -1,0 +1,137 @@
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #322625;
+    text-align: left;
+}
+
+th {
+    background-color: #c0e3e5;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+tbody td {
+    width: 20%;
+    word-wrap: break-word
+}
+
+.tableImg {
+    height: 50px;
+    width: 50px;
+}
+
+
+.table-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background-color: #ebebeb;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background-color: #c0e3e5;
+    border-radius: 10px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background-color: #fdc936;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.pagination {
+    display: grid;
+    grid-template-columns: repeat(15, minmax(40px, 1fr));
+    justify-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 700px;
+    padding: 10px;
+}
+
+.arrow-button, .pagination span {
+    padding: 10px;
+    border: 1px solid #c0e3e5;
+    border-radius: 5px;
+    background-color: #ebebeb;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.arrow-button:hover:not(:disabled),
+.pagination span:hover {
+    background-color: #c0e3e5;
+    color: #322625;
+}
+
+.pagination span.active {
+    color: #fdc936;
+    background-color: #c0e3e5;
+    border: 1px solid #fdc936;
+    pointer-events: none;
+}
+
+.page-number-options, .search-container, .filter-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.filter-select, .filter-input, .search-container input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.page-number-options {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.page-number-options select {
+    padding: 8px;
+    border: 1px solid #c0e3e5;
+    border-radius: 5px;
+    background-color: #ebebeb;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.page-number-options select:hover {
+    background-color: #c0e3e5;
+    color: #322625;
+}
+
+.search-button, .filter-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.search-button:hover, .filter-button:hover {
+    color: #fdc936;
+}
